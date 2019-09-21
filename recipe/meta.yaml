@@ -10,12 +10,12 @@ source:
   sha256: d936aab473775e76c3a749828054e3f7d42e3909e8b0f56f99ecf6aa169a9bd3
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - rust
-    - binutils              # [linux]
+    - {{ compiler('c') }}   # [unix]
     - {{native}}binutils    # [win]
 
 test:
@@ -25,6 +25,7 @@ test:
 about:
   home: https://github.com/sharkdp/hyperfine
   license: MIT
+  license_family: MIT
   summary: A command-line benchmarking tool
   license_file: LICENSE-MIT
 
