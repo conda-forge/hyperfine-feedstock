@@ -1,4 +1,4 @@
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 {% set native = 'm2w64-' if win else '' %}
 
 package:
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/sharkdp/hyperfine/archive/v{{ version }}.tar.gz
-  sha256: d936aab473775e76c3a749828054e3f7d42e3909e8b0f56f99ecf6aa169a9bd3
+  sha256: 14de63b44eb4c2c5d6a6f9354acbcff350c9a2ba50b2397de5798c152cc2a029
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
