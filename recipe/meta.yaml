@@ -1,4 +1,4 @@
-{% set version = "1.9.0" %}
+{% set version = "1.10.0" %}
 {% set native = 'm2w64-' if win else '' %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/sharkdp/hyperfine/archive/v{{ version }}.tar.gz
-  sha256: c2b1c6b6364b849acad43dc740c693f5b75a1a4649f24f43967a98c59ad9e9f7
+  sha256: b949d6c1a78e9c1c5a7bb6c241fcd51d6faf00bba5719cc312f57b5b301cc854
 
 build:
   number: 0
@@ -16,7 +16,7 @@ requirements:
   build:
     - rust
     - {{ compiler('c') }}   # [unix]
-    - {{native}}binutils    # [win]
+    - {{ native }}binutils    # [win]
 
 test:
   commands:
