@@ -1,5 +1,4 @@
 {% set version = "1.18.0" %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: hyperfine
@@ -10,13 +9,14 @@ source:
   sha256: fea7b92922117ed04b9c84bb9998026264346768804f66baa40743c5528bed6b
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
+    - {{ compiler('c') }}
     - {{ compiler('rust') }}
-    - {{ compiler('c') }}   # [unix]
-    - {{ native }}binutils    # [win]
+    - {{ stdlib("c") }}
+    - cargo-bundle-licenses
 
 test:
   commands:
@@ -27,7 +27,9 @@ about:
   license: MIT
   license_family: MIT
   summary: A command-line benchmarking tool
-  license_file: LICENSE-MIT
+  license_file:
+    - LICENSE-MIT
+    - THIRDPARTY.yml
 
 extra:
   recipe-maintainers:
