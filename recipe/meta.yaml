@@ -1,4 +1,4 @@
-{% set version = "1.18.0" %}
+{% set version = "1.19.0" %}
 
 package:
   name: hyperfine
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/sharkdp/hyperfine/archive/v{{ version }}.tar.gz
-  sha256: fea7b92922117ed04b9c84bb9998026264346768804f66baa40743c5528bed6b
+  sha256: d1c782a54b9ebcdc1dedf8356a25ee11e11099a664a7d9413fdd3742138fa140
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
