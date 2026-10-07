@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.21.0"
+  version: "2.0.0"
 
 package:
   name: hyperfine
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/sharkdp/hyperfine/archive/v${{ version }}.tar.gz
-  sha256: aee01125074fd5a6a556818db7bba0577edae94cbe85165daae0e778aa28348d
+  sha256: f4b71df3c78e4cf752ca6fb6ebc4b025f7ea6a5ca5c48fea75f8a1fdb4c7d721
 
 build:
   number: 0
